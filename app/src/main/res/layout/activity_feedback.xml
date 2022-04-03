@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feedback">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/Feedback_backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <TextView
+                android:id="@+id/Feedback_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Feedback_backArrow"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/FeedbackPage_Title"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/lineFeedBack"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/Feedback_Title"
+            android:background="@android:color/darker_gray"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Rate Your Experience"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Are you Satisfied with the Service?"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/darker_gray"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:numStars="5"
+                android:stepSize="1" />
+
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/darker_gray"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tell us what can be improved?"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/toggle_button_selector_feedback_form"
+                    android:fontFamily="@font/poppins"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:textOff="Overall Service"
+                    android:textOn="Overall Service" />
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/toggle_button_selector_feedback_form"
+                    android:fontFamily="@font/poppins"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:textOff="Customer Support"
+                    android:textOn="Customer Support" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/toggle_button_selector_feedback_form"
+                    android:fontFamily="@font/poppins"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:textOff="Usability"
+                    android:textOn="Usability" />
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/toggle_button_selector_feedback_form"
+                    android:fontFamily="@font/poppins"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:textOff="Efficiency"
+                    android:textOn="Efficiency" />
+            </LinearLayout>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="213dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Tell us on how can we improve..."
+                android:inputType="textPersonName" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/circular_button"
+                android:fontFamily="@font/poppins_light"
+                android:onClick="showPopUp"
+                android:text="Submit"
+                android:textColor="@color/black"
+                app:strokeColor="#000000"
+                app:strokeWidth="10dp"
+                android:layout_marginBottom="10dp"/>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

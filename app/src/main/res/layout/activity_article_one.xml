@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F7"
+    tools:context=".ArticleOne">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/item_menu" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConstraintLayout"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/leave_quiz_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Article"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="64dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#00FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/leave_quiz_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/leave_quiz_button"
+                    app:srcCompat="@drawable/ic_smallback" />
+
+                <ToggleButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/toggle_selector"
+                    android:onClick="onCustomToggleClick"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/leave_quiz_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/leave_quiz_button" />
+
+                <TextView
+                    android:id="@+id/quiz_question"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-8dp"
+                    android:text="What is Recycling?"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/quiz_question"
+                    app:srcCompat="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Fermin Koop"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="ZME Science"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Recycling is much more than just reducing the amount of waste sent to the landfill, with a long list of benefits that aren’t limited to the environment — there are economic and social advantages to recycling."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Even as we live in a consumer-driven world, with a growing appetite for new things, if we begin to look at the waste created by this level of consumption in a different light, we might turn our problem into an opportunity."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Whether it’s plastic, paper, or aluminum, the products and materials that can be used after they fulfill their original purpose are far from worthless. In fact, most materials have great recycling value. It is estimated that up to 75% of all the waste can be recycled or repurposed, a figure that how impactful the process can be if done right. Almost everything we see around us can be recycled, although different materials require different techniques when they are recycled. Most of the commonly recyclable materials include batteries, biodegradable waste, clothing, electronics, garments, glass, metals, paper, plastics, and a lot more."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Recycling the process of separating, collecting, and remanufacturing or converting used or waste products into new materials. But if we want to truly focus on recycling, it’s important to change the way we address it both on a personal and on a societal level."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Recycling helps extend the life and usefulness of something that has already served its initial purpose by returning it to its raw materials and then using those materials to produce something that is useable. It’s part of the three golden rules of sustainability (Reduce, Reuse, and Recycle) and has a lot of benefits both to us humans and to the environment. Virtually all the planet is impacted by how much we recycle."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-4sp"
+                    android:text="So, what is recycling?"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-4sp"
+                    android:text="Other topics that might interest you"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="343dp"
+                    android:layout_height="197dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22"
+                    app:shapeAppearanceOverlay="@style/roundimageview"
+                    app:srcCompat="@drawable/article_one_image" />
+
+                <TextView
+                    android:id="@+id/see_all_articles_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="See all articles"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/suggestedarticles_recycler"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

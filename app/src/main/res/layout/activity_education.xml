@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Education"
+    android:id="@+id/body_container"
+    android:background="#F5F7F7">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:elevation="2dp"
+        app:menu="@menu/item_menu"
+        android:background="@drawable/round_corner"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/item_selector"
+        android:id="@+id/bottom_navigation"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConstraintLayout"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/leave_quiz_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Academy"
+                    android:textColor="#000000"
+                    android:textSize="32sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="340dp"
+                    android:layout_height="400dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/leave_quiz_button"
+                    app:shapeAppearanceOverlay="@style/roundimageview"
+                    app:srcCompat="@drawable/academy_articles" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/leveltwo_icon"
+                    android:layout_width="340dp"
+                    android:layout_height="400dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                    app:shapeAppearanceOverlay="@style/roundimageview"
+                    app:srcCompat="@drawable/academy_videos" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="340dp"
+                    android:layout_height="400dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="100dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/leveltwo_icon"
+                    app:shapeAppearanceOverlay="@style/roundimageview"
+                    app:srcCompat="@drawable/academy_quizzes" />
+
+                <Button
+                    android:id="@+id/quiz_choice_one"
+                    android:layout_width="134dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/search_bg"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Articles"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                <Button
+                    android:id="@+id/video_button"
+                    android:layout_width="134dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/search_bg"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Videos"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView17"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                <Button
+                    android:id="@+id/quiz_button"
+                    android:layout_width="134dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/search_bg"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Quizzes"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView18"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-8sp"
+                    android:text="Short reads for book worms"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-8sp"
+                    android:text="Interesting clips on the go"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    app:layout_constraintStart_toStartOf="@+id/leveltwo_icon"
+                    app:layout_constraintTop_toTopOf="@+id/leveltwo_icon" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-8sp"
+                    android:text="Challenge yourself and earn points"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

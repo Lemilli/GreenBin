@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="365dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/location_bg" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/location_image"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.466"
+        app:shapeAppearanceOverlay="@style/roundimageview"
+        app:srcCompat="@drawable/random6" />
+
+    <TextView
+        android:id="@+id/location_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:lineSpacingExtra="-8sp"
+        android:text="Fake Xiamen University Malaysia"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/location_image"
+        app:layout_constraintTop_toTopOf="@+id/location_image" />
+
+    <TextView
+        android:id="@+id/distance_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:lineSpacingExtra="-8sp"
+        android:text="5km away, 30 mins drive"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/location_image"
+        app:layout_constraintStart_toStartOf="@+id/state_name" />
+
+    <TextView
+        android:id="@+id/state_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:fontFamily="@font/poppins"
+        android:text="Selangor, Malaysia"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/location_name"
+        app:layout_constraintTop_toBottomOf="@+id/location_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

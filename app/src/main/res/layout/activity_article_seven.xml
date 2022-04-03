@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F7"
+    tools:context=".ArticleSeven">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/item_menu" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConstraintLayout"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/leave_quiz_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Article"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="64dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#00FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/leave_quiz_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/leave_quiz_button"
+                    app:srcCompat="@drawable/ic_smallback" />
+
+                <ToggleButton
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/toggle_selector"
+                    android:onClick="onCustomToggleClick"
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/leave_quiz_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/leave_quiz_button" />
+
+                <TextView
+                    android:id="@+id/quiz_question"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="0dp"
+                    android:text="Looking to 2022 and Beyond: The Future of Recycling (Part 2)"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/quiz_question"
+                    app:srcCompat="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="RTS Blog"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Waste and Recycling"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="As we enter the third decade of the millennium we must understand that global waste generation is one of the most pressing issues of our time—an inevitable by-product of capitalist and consumerist growth. A crisis that is not going away and is getting worse each year."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="That’s not to say that changes aren’t being made, but there’s still a long way to go, and arguably, to-date, the recycling industry could be seen as more 19th century than 21st."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="So, how will recycling develop over the third decade of the 21st century? And what lies beyond? Pulled from our 2020 State of Recycling Report, here we dive into some key factors that are set to drive the future of recycling in America."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Waste is only waste because we do not value it. When considering the future of recycling, evaluating the worth of products at all stages of the chain — from production through consumption to disposal — is crucial to ensuring that we take stock of our careless use of finite resources. Extended Producer Responsibility (EPR) is one attempt to ensure this happens, and over the next decade, its reach will extend and boost the recycling industry in a number of ways."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="One element of EPR will encapsulate all of the environmental costs of a particular product, and while it has been around in some form since the 1990’s, the future of the recycling industry will increasingly depend on this new approach in the way we value our waste. Demanufacturing will become integral to this process, essentially keeping products, materials, and resources in circulation for increasingly longer periods by ensuring they can be disassembled or recycled at the end of the chain."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Put simply, through robust EPR legislation from government and continued consumer pressure, future product prices will include a value or tax on potential environmental impact. This will incentivize manufacturers to use more sustainable products, operate efficient reuse and repair programs, and ensure recycling is quicker, more efficient, and cheaper."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Existing technologies are making waves across the recycling industry. Radiofrequency identification (RFID) and other tracking technologies are providing increased transparency during both production and subsequent disposal, allowing the entire lifecycle of products to be tracked and recorded. Over the next decade, recycling initiatives will dictate that an increasing number of products become part of these programs, allowing detailed metrics to be identified across a huge range of data points."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Technologies related to the future of recycling will also be developed in material sensors that aim to bring increased efficiency to facilities on both commercial and consumer scales. Ensuring waste streams are “pure” is among one of the key challenges facing effective recycling, and the growth of mass-produced material sensors will boost separation efficiencies in the home and within recycling facilities."
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-4sp"
+                    android:text="Revaluating worth"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-4sp"
+                    android:text="Tech and transparency go hand in hand"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-4sp"
+                    android:text="Other topics that might interest you"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="343dp"
+                    android:layout_height="197dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView33"
+                    app:shapeAppearanceOverlay="@style/roundimageview"
+                    app:srcCompat="@drawable/article_seven_image" />
+
+                <TextView
+                    android:id="@+id/see_all_articles_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="See all articles"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/suggestedarticles_recycler"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

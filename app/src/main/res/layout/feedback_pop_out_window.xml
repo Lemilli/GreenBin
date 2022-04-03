@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:outlineAmbientShadowColor="@color/black"
+    android:padding="5dp"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/feedback_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_outline_check_circle_24" />
+
+    <TextView
+        android:id="@+id/feedback_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/feedback_icon"
+        android:layout_marginTop="20dp"
+
+        android:fontFamily="@font/poppins"
+        android:text="Thanks for your feedback!"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/feedback_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/feedback_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/circular_button"
+        android:fontFamily="@font/poppins_light"
+        android:text="Return"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

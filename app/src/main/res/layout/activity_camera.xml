@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Camera">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_banner"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/quiz_level_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/newUserText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="248dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Redeem Points"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="CLAIM TOP REBATES TODAY!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.723" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ManualCode"
+        app:menu="@menu/item_menu" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/firststep"
+        android:layout_width="154dp"
+        android:layout_height="158dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="252dp"
+        android:adjustViewBounds="true"
+        android:elevation="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/firststep"
+        app:layout_constraintBottom_toTopOf="@+id/bt_scan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_banner"
+        app:layout_constraintVertical_bias="0.478"
+        app:shapeAppearanceOverlay="@style/roundImageView" />
+
+    <Button
+        android:id="@+id/btn_ManualCode"
+        android:layout_width="91dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="115dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Submit"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputcode"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.53"
+        app:shapeAppearanceOverlay="@style/roundButtonView" />
+
+    <EditText
+        android:id="@+id/inputcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="125dp"
+        android:ems="10"
+        android:hint="Input Code Manually"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ManualCode"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.951" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="8dp"
+        android:text="Trouble Scanning The Code?"
+        app:layout_constraintBottom_toTopOf="@+id/inputcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_scan"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/bt_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Scan QR code"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondstep"
+        app:layout_constraintVertical_bias="1.0"
+        app:shapeAppearanceOverlay="@style/roundButtonView" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/secondstep"
+        android:layout_width="154dp"
+        android:layout_height="158dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="263dp"
+        android:adjustViewBounds="true"
+        android:elevation="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/secondstep"
+        app:layout_constraintBottom_toTopOf="@+id/bt_scan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toEndOf="@+id/firststep"
+        app:layout_constraintTop_toBottomOf="@+id/home_banner"
+        app:layout_constraintVertical_bias="0.060000002"
+        app:shapeAppearanceOverlay="@style/roundImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="255dp"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/video_image"
+        android:layout_width="236dp"
+        android:layout_height="133dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="15dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundimageview"
+        app:srcCompat="@drawable/random3" />
+
+    <TextView
+        android:id="@+id/NormalText"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:lineSpacingExtra="-8dp"
+        android:text="This is a description, so I think it should have at least 2 lines."
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/video_name"
+        app:layout_constraintTop_toBottomOf="@+id/video_name" />
+
+    <TextView
+        android:id="@+id/video_name"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:lineSpacingExtra="-4sp"
+        android:text="Video Name"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/video_image"
+        app:layout_constraintTop_toBottomOf="@+id/video_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

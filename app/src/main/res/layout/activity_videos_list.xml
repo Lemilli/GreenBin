@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7F7"
+    tools:context=".VideosList">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/item_menu" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ConstraintLayout"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/leave_quiz_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="All Videos"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="#00000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/leave_quiz_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/leave_quiz_button"
+                    app:srcCompat="@drawable/ic_smallback" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="64dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/quiz_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Picked For You"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="All Videos"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="@+id/quiz_question"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="361dp"
+                    android:layout_height="206dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/quiz_question"
+                    app:shapeAppearanceOverlay="@style/roundimageview"
+                    app:srcCompat="@drawable/article_one_image" />
+
+                <Button
+                    android:id="@+id/picked_video_button"
+                    android:layout_width="121dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/search_bg"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Watch Now"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.07"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:lineSpacingExtra="-4dp"
+                    android:text="Malaysia and the Broken Global Recycling System"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.097"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videoone_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    android:outlineSpotShadowColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image1"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_one_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name1"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name1" />
+
+                    <TextView
+                        android:id="@+id/video_description1"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="This video showcases sophisticated shredding and separation technologies that offer unsurpassed recycling capabilities."
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image1"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText1" />
+
+                    <TextView
+                        android:id="@+id/video_name1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:lineSpacingExtra="-4sp"
+                        android:text="How Computers are Recycled?"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videoone_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name1"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videotwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videoone_button">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image2"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_two_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name2"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name2" />
+
+                    <TextView
+                        android:id="@+id/video_description2"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="Hello I am the Earth, yup the very planet you live on. There are three words which start with the letter R which I love. They are: Reduce, reuse and recycle. "
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image2"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText2" />
+
+                    <TextView
+                        android:id="@+id/video_name2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Reduce, Reuse and Recycle"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videotwo_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name2"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videothree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videotwo">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image3"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_three_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name3"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name3" />
+
+                    <TextView
+                        android:id="@+id/video_description3"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="The concept of recycling allows us to make our environment clean, as it keeps the collection of harmful bottles and materials at a minimum."
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image3"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText3" />
+
+                    <TextView
+                        android:id="@+id/video_name3"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Recycling Plastic, Glass and Paper"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videothree_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name3"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videofour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videothree">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image4"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_four_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name4"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name4" />
+
+                    <TextView
+                        android:id="@+id/video_description4"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="The Sims Municipal Recycling Facility in Brooklyn is the largest recycling facility in the country. In just one day, the facility sees about 800 tons of recyclable materials. "
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image4"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText4" />
+
+                    <TextView
+                        android:id="@+id/video_name4"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="US Largest Recycling Facility"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videofour_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name4"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videosix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videofive">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image6"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_six_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name6"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name6" />
+
+                    <TextView
+                        android:id="@+id/video_description6"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="Humans make a lot of garbage every day, and a lot of it ends up in big, smelly dumps. Luckily, there are things we can do to reuse a lot of our garbage and keep the Earth healthy and clean!"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image6"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText6" />
+
+                    <TextView
+                        android:id="@+id/video_name6"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="How Recycling Works?"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videosix_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name6"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videofive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videofour">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image5"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_five_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name5"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name5" />
+
+                    <TextView
+                        android:id="@+id/video_description5"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="The world produces approximately 50 million tons of electronic waste each year. Half of them come from personal consumer electronics, such as smartphone and laptops."
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image5"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText5" />
+
+                    <TextView
+                        android:id="@+id/video_name5"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Treasures from Trash"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videofive_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name5"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videoseven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videosix">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image7"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_seven_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name7"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name7" />
+
+                    <TextView
+                        android:id="@+id/video_description7"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="Stena is investing heavily in the future of recycling technology. The new facility will be an important contribution to Sweden and the Nordic countries' opportunities"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image7"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText7" />
+
+                    <TextView
+                        android:id="@+id/video_name7"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="The Future of Recycling"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image7"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videoseven_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name7"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videoeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videoseven">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image8"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_eight_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name8"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name8" />
+
+                    <TextView
+                        android:id="@+id/video_description8"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="THE LIST is a daily TV show that covers the hottest trends and topics in life hacks, pop culture, deals and gadgets to make your life a little easier."
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image8"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText8" />
+
+                    <TextView
+                        android:id="@+id/video_name8"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Recycling Trends"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image8"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videoeight_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name8"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videonine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videoeight">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image9"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_nine_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name9"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name9" />
+
+                    <TextView
+                        android:id="@+id/video_description9"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="Greenpeace Malaysia has been conducting field investigations into the broken global system of recycling, and how Malaysia has become a dumping ground for the unwanted trash of 19 other countries."
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image9"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText9" />
+
+                    <TextView
+                        android:id="@+id/video_name9"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Broken Global Recycling System"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image9"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videonine_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name9"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/videoten"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="100dp"
+                    android:background="@drawable/search_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videonine">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/video_image10"
+                        android:layout_width="96dp"
+                        android:layout_height="54dp"
+                        android:layout_margin="20dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/smallroundimageview"
+                        app:srcCompat="@drawable/video_ten_cover" />
+
+                    <TextView
+                        android:id="@+id/NormalText10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:lineSpacingExtra="0dp"
+                        android:text="MisterBin Originals"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/video_name10"
+                        app:layout_constraintTop_toBottomOf="@+id/video_name10" />
+
+                    <TextView
+                        android:id="@+id/video_description10"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:lineSpacingExtra="0sp"
+                        android:text="Knowing what you can and can’t recycle isn’t easy. But when you put stuff that can’t be recycled into that blue bin, it can turn entire hauls of otherwise recyclable materials into trash. "
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/video_image10"
+                        app:layout_constraintTop_toBottomOf="@+id/NormalText10" />
+
+                    <TextView
+                        android:id="@+id/video_name10"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Why You're Recycling Wrong?"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/video_image10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/videoten_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="#FFFFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/NormalText10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/video_name10"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_playvideo" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

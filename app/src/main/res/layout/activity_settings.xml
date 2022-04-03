@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/Settings_backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Settings_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/Settings_backArrow"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/settingPage_Title"
+                android:textSize="34sp"
+                app:layout_constraintStart_toEndOf="@+id/Settings_backArrow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/lineSettings"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/Settings_Title"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/Settings_Notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:includeFontPadding="false"
+                android:text="@string/settingPage_Notification"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Settings_Offer"
+                android:layout_width="292dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Settings_Notification"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/settingPage_OffersAndVouchers"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Settings_Notification">
+
+
+            </TextView>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/Settings_Offer"
+                android:thumb="@drawable/switch_thumb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Settings_Notification"
+                app:track="@drawable/switch_thread" />
+
+            <TextView
+                android:id="@+id/Settings_Updates"
+                android:layout_width="292dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Settings_Offer"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/settingPage_Updates"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Settings_Offer" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@+id/Settings_Updates"
+                android:thumb="@drawable/switch_thumb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchCompat"
+                app:track="@drawable/switch_thread" />
+
+            <TextView
+                android:id="@+id/Settings_News"
+                android:layout_width="292dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Settings_Updates"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/settingPage_News"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Settings_Updates" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@+id/Settings_News"
+                android:thumb="@drawable/switch_thumb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchCompat3"
+                app:track="@drawable/switch_thread" />
+
+            <TextView
+                android:id="@+id/Settings_Music"
+                android:layout_width="292dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Settings_News"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/settingPage_Music"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Settings_News" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@+id/Settings_Music"
+                android:thumb="@drawable/switch_thumb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchCompat2"
+                app:track="@drawable/switch_thread" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

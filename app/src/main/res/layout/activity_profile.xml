@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/body_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Profile">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/item_menu" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/wallet_page_card_background"
+                android:padding="20dp">
+
+
+                <ImageView
+                    android:id="@+id/profilePic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_pic_levi" />
+
+                <TextView
+                    android:id="@+id/username_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/profilePic"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:text="Just A Potato"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/email_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/username_profile"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/profilePic"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:text="potato_potato"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-90dp"
+                android:padding="20dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/walletCard"
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/walletButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/wallet_page_card_background"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/coinIcon"
+                            android:layout_width="48dp"
+                            android:layout_height="45dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_outline_account_balance_wallet_24" />
+
+                        <TextView
+                            android:id="@+id/paymentLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/coinIcon"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:includeFontPadding="false"
+                            android:text="RM920.00"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/paymentDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/paymentLabel"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins"
+                            android:includeFontPadding="false"
+                            android:text="Balance"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/pointCard"
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/pointButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/wallet_page_card_background"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/pointIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="48dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_outline_generating_tokens_376" />
+
+                        <TextView
+                            android:id="@+id/pointCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pointIcon"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:includeFontPadding="false"
+                            android:text="56"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/pointDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pointCount"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins"
+                            android:includeFontPadding="false"
+                            android:text="Points"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/AccountSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:text="ACCOUNT SETTINGS"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/PersonalInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/AccountSettings"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Personal Information"
+                    android:textSize="20sp"
+                    app:drawableRightCompat="@drawable/ic_baseline_person_outline_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/AccountSettings" />
+
+                <View
+                    android:id="@+id/linePersonalInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_below="@+id/PersonalInfo"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PersonalInfo" />
+
+
+                <TextView
+                    android:id="@+id/Settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linePersonalInfo"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Settings"
+                    android:textSize="20sp"
+                    app:drawableRightCompat="@drawable/ic_outline_settings_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PersonalInfo" />
+
+
+                <View
+                    android:id="@+id/lineSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_below="@+id/Settings"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Settings" />
+
+
+                <TextView
+                    android:id="@+id/support"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lineSettings"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:paddingTop="20dp"
+                    android:text="SUPPORT"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Settings" />
+
+                <TextView
+                    android:id="@+id/getHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/support"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Get Help"
+                    android:textSize="20sp"
+                    app:drawableRightCompat="@drawable/ic_baseline_help_outline_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/support" />
+
+                <View
+                    android:id="@+id/lineHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_below="@+id/getHelp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/getHelp" />
+
+                <TextView
+                    android:id="@+id/feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lineHelp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Feedback"
+                    android:textSize="20sp"
+                    app:drawableRightCompat="@drawable/ic_baseline_chat_bubble_outline_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/getHelp" />
+
+                <View
+                    android:id="@+id/lineFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_below="@+id/feedback"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/feedback" />
+
+                <TextView
+                    android:id="@+id/legal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lineFeedback"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:paddingTop="20dp"
+                    android:text="LEGAL"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/feedback" />
+
+                <TextView
+                    android:id="@+id/termsOfService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/legal"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Terms of Service"
+                    android:textSize="20sp"
+                    app:drawableRightCompat="@drawable/ic_outline_article_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/legal" />
+
+                <View
+                    android:id="@+id/lineTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_below="@+id/termsOfService"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/termsOfService" />
+
+                <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lineTerms"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:includeFontPadding="false"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Log out"
+                    android:textSize="20sp"
+                    app:drawableRightCompat="@drawable/ic_baseline_logout_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/termsOfService" />
+
+                <View
+                    android:id="@+id/lineLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height=".8dp"
+                    android:layout_below="@+id/logout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@android:color/darker_gray"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
